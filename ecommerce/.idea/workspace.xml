@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e659037-05be-4ede-8bb1-4a89335f5f00" name="Changes" comment="Implementação do Kafka consumidor, ouvir e salvar os eventos (novo usuário) criado na app User.">
+    <list default="true" id="1e659037-05be-4ede-8bb1-4a89335f5f00" name="Changes" comment="Implementação do Kafka consumidor, ouvir e salvar os eventos (novo usuário) criado na app User. Finalizado">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/enums/ProductCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/models/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/src/main/java/br/com/ecommerce/user/config/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/src/main/java/br/com/ecommerce/user/config/KafkaProducerConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -347,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722263138785</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Implementação do Kafka consumidor, ouvir e salvar os eventos (novo usuário) criado na app User. Finalizado">
+      <option name="closed" value="true" />
+      <created>1722265512104</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1722265512104</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +381,8 @@
     <MESSAGE value="Adicionei um método que busca os produtos, de acordo com a categoria que for passada no parametro. &#10;Tirei o flyway por hora, pois estava dando muitos problemas de config." />
     <MESSAGE value="Exclusão de um método e de alguns blocos de código comentados." />
     <MESSAGE value="Implementação do Kafka consumidor, ouvir e salvar os eventos (novo usuário) criado na app User." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação do Kafka consumidor, ouvir e salvar os eventos (novo usuário) criado na app User." />
+    <MESSAGE value="Implementação do Kafka consumidor, ouvir e salvar os eventos (novo usuário) criado na app User. Finalizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementação do Kafka consumidor, ouvir e salvar os eventos (novo usuário) criado na app User. Finalizado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
