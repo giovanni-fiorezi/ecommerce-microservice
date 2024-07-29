@@ -92,7 +92,6 @@ public class UserService {
             emailService.sendEmailNewUser(email, user);
 
             CompletableFuture<SendResult<String, Object>> send = kafkaTemplate.send("new-user", user);
-            System.out.println(send);
 
         } catch(Exception e) {
             e.printStackTrace();
