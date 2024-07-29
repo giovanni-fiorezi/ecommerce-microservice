@@ -7,15 +7,13 @@
     <list default="true" id="1e659037-05be-4ede-8bb1-4a89335f5f00" name="Changes" comment="Exclusão de um método e de alguns blocos de código comentados.">
       <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/config/KafkaConsumerConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__Create_Table_Produto.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V2__Populate_Table_Produto.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user/src/main/java/br/com/ecommerce/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/src/main/java/br/com/ecommerce/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../user/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
