@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e659037-05be-4ede-8bb1-4a89335f5f00" name="Changes" comment="Cadastro de produtos: iniciando o CRUD e o upload de planilhas de produtos no sistema.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/dto/ProductDto.java" afterDir="false" />
+    <list default="true" id="1e659037-05be-4ede-8bb1-4a89335f5f00" name="Changes" comment="Cadastro de produtos: Serviços finalizados, iniciando upload da planilha de produtos.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/mapper/ModelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/mapper/ModelMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/src/main/java/br/com/ecommerce/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/src/main/java/br/com/ecommerce/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -361,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722275786424</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Cadastro de produtos: Serviços finalizados, iniciando upload da planilha de produtos.">
+      <option name="closed" value="true" />
+      <created>1722291445684</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1722291445684</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +396,8 @@
     <MESSAGE value="Implementação do Kafka consumidor, ouvir e salvar os eventos (novo usuário) criado na app User." />
     <MESSAGE value="Implementação do Kafka consumidor, ouvir e salvar os eventos (novo usuário) criado na app User. Finalizado" />
     <MESSAGE value="Cadastro de produtos: iniciando o CRUD e o upload de planilhas de produtos no sistema." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cadastro de produtos: iniciando o CRUD e o upload de planilhas de produtos no sistema." />
+    <MESSAGE value="Cadastro de produtos: Serviços finalizados, iniciando upload da planilha de produtos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cadastro de produtos: Serviços finalizados, iniciando upload da planilha de produtos." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
