@@ -6,7 +6,6 @@ import br.com.ecommerce.user.entity.User;
 import br.com.ecommerce.user.mapper.UserMapper;
 import br.com.ecommerce.user.repository.UserRepository;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,7 +13,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 @Service
