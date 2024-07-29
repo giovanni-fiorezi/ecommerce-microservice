@@ -17,7 +17,6 @@ public class UserService {
     @KafkaListener(topics = "new-user", groupId = "form-new-user")
     public User saveNewUser(User user) {
         userRepository.save(user);
-        System.out.println("************ SALVANDO O NOVO USUÁRIO ************** " + user);
         return user;
     }
 }
