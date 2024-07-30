@@ -1,6 +1,7 @@
 package br.com.projeto.ecommerce.service;
 
 import br.com.projeto.ecommerce.dto.ProductDto;
+import br.com.projeto.ecommerce.enums.ProductCategory;
 import br.com.projeto.ecommerce.models.Product;
 import br.com.projeto.ecommerce.repository.ProductRepository;
 import org.modelmapper.ModelMapper;
@@ -10,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductService {
@@ -23,12 +25,27 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public List<Product> findAll() {
+    public List<ProductDto> findAll() {
         try {
-            return productRepository.findAll();
+            List<Product> products = productRepository.findAll();
+            return products.stream().map(
+                    p -> modelMapper.map(p, ProductDto.class)).collect(Collectors.toList());
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Erro ao buscar todos os produtos!");
+        }
+    }
+
+    public List<ProductDto> findProductsByCategory(ProductCategory productCategory) {
+        try {
+            List<Product> products = productRepository.findAll();
+            return products.stream()
+                    .filter(product -> product.getProductCategory().equals(productCategory))
+                    .map(p -> modelMapper.map(p, ProductDto.class))
+                    .collect(Collectors.toList());
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar os produtos!");
         }
     }
 
