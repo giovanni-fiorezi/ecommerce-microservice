@@ -2,6 +2,7 @@ package br.com.projeto.ecommerce.resource;
 
 import br.com.projeto.ecommerce.dto.ProductDto;
 import br.com.projeto.ecommerce.enums.ProductCategory;
+import br.com.projeto.ecommerce.models.Product;
 import br.com.projeto.ecommerce.service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -39,19 +40,32 @@ public class ProductResource {
         return ResponseEntity.ok().body(dto);
     }
 
-    @PostMapping
+    @PostMapping("/save-product")
     public ResponseEntity<String> saveProduct(@RequestBody ProductDto productDto) {
         productService.saveProduct(productDto);
         return ResponseEntity.status(HttpStatus.CREATED).body("Produto criado com sucesso!");
     }
 
-    @DeleteMapping
-    public ResponseEntity<String> saveProduct(@PathVariable Long id) {
-        productService.removeProduct(id);
-        return ResponseEntity.status(HttpStatus.CREATED).body("Produto removido com sucesso!");
+    @PutMapping("/{productId}")
+    public ResponseEntity<Product> updateProduct(@RequestBody ProductDto dto, @PathVariable Long productId) {
+        try {
+            Product updatedProduct = productService.updateProduct(dto, productId);
+            return ResponseEntity.status(HttpStatus.OK).body(updatedProduct);
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
     }
 
-    @PostMapping
+    @DeleteMapping("/{idProduct}")
+    public ResponseEntity<String> removeProduct(@PathVariable Long idProduct) {
+        productService.removeProduct(idProduct);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Produto removido com sucesso!");
+    }
+
+    @PostMapping("/upload-file")
     public ResponseEntity<String> uploadFile(@RequestParam("file")MultipartFile file) throws IOException {
         productService.readAndSaveExcel(file);
         return ResponseEntity.status(HttpStatus.CREATED).body("Dados do arquivo salvo com sucesso!");

@@ -3,19 +3,18 @@ package br.com.projeto.ecommerce.service;
 import br.com.projeto.ecommerce.dto.ProductDto;
 import br.com.projeto.ecommerce.enums.ProductCategory;
 import br.com.projeto.ecommerce.mapper.ModelMapper;
+import br.com.projeto.ecommerce.mapper.ProductMapper;
 import br.com.projeto.ecommerce.models.Product;
 import br.com.projeto.ecommerce.repository.ProductRepository;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigDecimal;
@@ -77,6 +76,27 @@ public class ProductService {
         }
     }
 
+    @Transactional(rollbackFor = Exception.class)
+    public Product updateProduct(ProductDto dto, Long id) {
+        if (dto == null) {
+            throw new IllegalArgumentException("Produto não pode ser nulo.");
+        }
+
+        Optional<Product> productExists = productRepository.findById(id);
+        if (productExists.isEmpty()) {
+            throw new RuntimeException("Produto não encontrado com ID: " + id);
+        }
+
+        try {
+            Product product = productExists.get();
+            BeanUtils.copyProperties(dto, product);
+            return productRepository.save(product);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao atualizar o produto") ;
+        }
+    }
+
     @Transactional(rollbackFor=Exception.class)
     public void removeProduct(Long id) {
         if(id == null) {
@@ -91,6 +111,7 @@ public class ProductService {
         );
     }
 
+    @Transactional(rollbackFor = Exception.class)
     public void readAndSaveExcel(MultipartFile file) throws IOException {
         try {
             InputStream inputStream = file.getInputStream();
