@@ -3,7 +3,6 @@ package br.com.projeto.ecommerce.service;
 import br.com.projeto.ecommerce.dto.ProductDto;
 import br.com.projeto.ecommerce.enums.ProductCategory;
 import br.com.projeto.ecommerce.mapper.ModelMapper;
-import br.com.projeto.ecommerce.mapper.ProductMapper;
 import br.com.projeto.ecommerce.models.Product;
 import br.com.projeto.ecommerce.repository.ProductRepository;
 import org.apache.poi.ss.usermodel.Row;
