@@ -5,7 +5,12 @@ import br.com.projeto.ecommerce.enums.StatusCart;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * Entidade que representa o carrinho de compras
+ **/
 
 @Entity
 @Table(name = "shopping_carts")
@@ -18,15 +23,15 @@ public class ShoppingCart {
     @ManyToOne
     private User user;
 
-    @ManyToOne
-    private List<Product> products;
-
-    private Integer amount;
+    @OneToMany(mappedBy = "shoppingCart", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CarItem> items = new ArrayList<>(); // itens do carrinhho
 
     private BigDecimal totalPrice;
 
+    @Enumerated(EnumType.STRING)
     private StatusCart statusCart;
 
+    @Enumerated(EnumType.STRING)
     private PaymentType paymentType;
 
     public Long getId() {
@@ -45,20 +50,12 @@ public class ShoppingCart {
         this.user = user;
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public List<CarItem> getItems() {
+        return items;
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
-
-    public Integer getAmount() {
-        return amount;
-    }
-
-    public void setAmount(Integer amount) {
-        this.amount = amount;
+    public void setItems(List<CarItem> items) {
+        this.items = items;
     }
 
     public BigDecimal getTotalPrice() {
