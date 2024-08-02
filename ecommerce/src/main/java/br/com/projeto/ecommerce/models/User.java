@@ -1,9 +1,7 @@
 package br.com.projeto.ecommerce.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import br.com.projeto.ecommerce.enums.StatusUser;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users")
@@ -27,16 +25,20 @@ public class User {
     @Column(name="senha", nullable = false)
     private String senha;
 
+    @Enumerated(EnumType.STRING)
+    private StatusUser statusUser;
+
     public User() {
     }
 
-    public User(String id, String name, String lastName, String email, String login, String senha) {
+    public User(String id, String name, String lastName, String email, String login, String senha, StatusUser statusUser) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.email = email;
         this.login = login;
         this.senha = senha;
+        this.statusUser = statusUser;
     }
 
     public String getId() {
@@ -85,5 +87,13 @@ public class User {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public StatusUser getStatusUser() {
+        return statusUser;
+    }
+
+    public void setStatusUser(StatusUser statusUser) {
+        this.statusUser = statusUser;
     }
 }
