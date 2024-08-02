@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e659037-05be-4ede-8bb1-4a89335f5f00" name="Changes" comment="iniciando implementação da entidade e dos serviços relacionados ao carrinho de compra.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/enums/PaymentType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/enums/StatusCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/models/ShoppingCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/repository/ShoppingCartRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/ShoppingCartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/src/main/java/br/com/ecommerce/user/enums/StatusUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/mapper/ProductMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/src/main/java/br/com/ecommerce/user/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/src/main/java/br/com/ecommerce/user/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/src/main/java/br/com/ecommerce/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/src/main/java/br/com/ecommerce/user/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,7 +399,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722527461598</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="iniciando implementação da entidade e dos serviços relacionados ao carrinho de compra.">
+      <option name="closed" value="true" />
+      <created>1722531714633</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1722531714633</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

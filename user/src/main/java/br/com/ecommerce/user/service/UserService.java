@@ -3,6 +3,7 @@ package br.com.ecommerce.user.service;
 import br.com.ecommerce.user.dto.UserDto;
 import br.com.ecommerce.user.entity.Email;
 import br.com.ecommerce.user.entity.User;
+import br.com.ecommerce.user.enums.StatusUser;
 import br.com.ecommerce.user.mapper.UserMapper;
 import br.com.ecommerce.user.repository.UserRepository;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -82,6 +83,7 @@ public class UserService {
             boolean emailValido = emailUser.matches(REGEX_EMAIL);
 
             if(emailValido) {
+                user.setStatusUser(StatusUser.ACTIVE); //Todos os usuários ao serem criados são ativos
                 userRepository.save(user);
             }
             Email email = new Email();

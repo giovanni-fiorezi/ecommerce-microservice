@@ -1,8 +1,8 @@
 package br.com.ecommerce.user.entity;
 
+import br.com.ecommerce.user.enums.StatusUser;
 import jakarta.persistence.*;
 
-import java.util.Objects;
 import java.util.UUID;
 
 @Entity
@@ -28,16 +28,20 @@ public class User {
     @Column(name="senha", nullable = false)
     private String senha;
 
+    @Enumerated(EnumType.STRING)
+    private StatusUser statusUser;
+
     public User() {
     }
 
-    public User(UUID id, String name, String lastName, String email, String login, String senha) {
+    public User(UUID id, String name, String lastName, String email, String login, String senha, StatusUser statusUser) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.email = email;
         this.login = login;
         this.senha = senha;
+        this.statusUser = statusUser;
     }
 
     public UUID getId() {
@@ -88,29 +92,12 @@ public class User {
         this.senha = senha;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return Objects.equals(id, user.id) && Objects.equals(name, user.name) && Objects.equals(lastName, user.lastName) && Objects.equals(email, user.email) && Objects.equals(login, user.login) && Objects.equals(senha, user.senha);
+    public StatusUser getStatusUser() {
+        return statusUser;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, lastName, email, login, senha);
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", login='" + login + '\'' +
-                ", senha='" + senha + '\'' +
-                '}';
+    public void setStatusUser(StatusUser statusUser) {
+        this.statusUser = statusUser;
     }
 
     public String getFullName() {
