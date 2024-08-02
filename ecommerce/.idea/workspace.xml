@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e659037-05be-4ede-8bb1-4a89335f5f00" name="Changes" comment="Feature Carrinho de compras: implementando todos os serviços relacionados ao carrinho de compras, fazendo uma compra (creat, com algumas regras de desconto dependendo da forma de pagamento), busca por id e geral, remoção de uma compra.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/models/CarItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/repository/CarItemRepository.java" afterDir="false" />
+    <list default="true" id="1e659037-05be-4ede-8bb1-4a89335f5f00" name="Changes" comment="Ajuste feito na modelage, tive que criar mais uma tabela para &quot;item carrrinho&quot;, onde irá mapear os itens do carrinho com o nome, quantidade e tudo mais. Dessa forma fica mais legível e mais fácil de criar os serviços relacionados.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/request/ShoppingCartRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/resource/ShoppingCartResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/models/CarItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/models/CarItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/models/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/models/ShoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/ShoppingCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/ShoppingCartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -84,7 +87,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Application.executor": "Run",
+    "Application.Application.executor": "Debug",
     "Maven.br.com.projeto [clean].executor": "Run",
     "Maven.br.com.projeto [install].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -415,7 +418,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722609830220</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Ajuste feito na modelage, tive que criar mais uma tabela para &quot;item carrrinho&quot;, onde irá mapear os itens do carrinho com o nome, quantidade e tudo mais. Dessa forma fica mais legível e mais fácil de criar os serviços relacionados.">
+      <option name="closed" value="true" />
+      <created>1722613893970</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1722613893970</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +463,8 @@
     <MESSAGE value="Atualização de produto finalizado.&#10;COm isso o CRUD de produtos está pronto" />
     <MESSAGE value="iniciando implementação da entidade e dos serviços relacionados ao carrinho de compra." />
     <MESSAGE value="Feature Carrinho de compras: implementando todos os serviços relacionados ao carrinho de compras, fazendo uma compra (creat, com algumas regras de desconto dependendo da forma de pagamento), busca por id e geral, remoção de uma compra." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature Carrinho de compras: implementando todos os serviços relacionados ao carrinho de compras, fazendo uma compra (creat, com algumas regras de desconto dependendo da forma de pagamento), busca por id e geral, remoção de uma compra." />
+    <MESSAGE value="Ajuste feito na modelage, tive que criar mais uma tabela para &quot;item carrrinho&quot;, onde irá mapear os itens do carrinho com o nome, quantidade e tudo mais. Dessa forma fica mais legível e mais fácil de criar os serviços relacionados." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste feito na modelage, tive que criar mais uma tabela para &quot;item carrrinho&quot;, onde irá mapear os itens do carrinho com o nome, quantidade e tudo mais. Dessa forma fica mais legível e mais fácil de criar os serviços relacionados." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -512,6 +524,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/resource/ProductResource.java</url>
           <line>51</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/resource/ShoppingCartResource.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/projeto/ecommerce/service/ShoppingCartService.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

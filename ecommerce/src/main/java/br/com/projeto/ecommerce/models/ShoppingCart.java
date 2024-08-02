@@ -20,11 +20,12 @@ public class ShoppingCart {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @OneToMany(mappedBy = "shoppingCart", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CarItem> items = new ArrayList<>(); // itens do carrinhho
+    private List<CarItem> carItens = new ArrayList<>(); // itens do carrinhho
 
     private BigDecimal totalPrice;
 
@@ -50,12 +51,12 @@ public class ShoppingCart {
         this.user = user;
     }
 
-    public List<CarItem> getItems() {
-        return items;
+    public List<CarItem> getCarItens() {
+        return carItens;
     }
 
-    public void setItems(List<CarItem> items) {
-        this.items = items;
+    public void setCarItens(List<CarItem> carItens) {
+        this.carItens = carItens;
     }
 
     public BigDecimal getTotalPrice() {

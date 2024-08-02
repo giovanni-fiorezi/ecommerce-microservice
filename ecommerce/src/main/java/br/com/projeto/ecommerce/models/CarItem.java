@@ -25,6 +25,8 @@ public class CarItem {
     @Column(name = "price")
     private BigDecimal price;
 
+    private Integer amount;
+
     public Long getId() {
         return id;
     }
@@ -55,5 +57,13 @@ public class CarItem {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
     }
 }
